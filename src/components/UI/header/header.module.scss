@@ -1,0 +1,60 @@
+@import "./src/sass/abstract/constants";
+.header{
+    padding: 20px 100px;
+    background-color: $main-color-dark;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.logo{
+    font: 400 20px "Impact";
+    color: $primary-text-color;
+    width: 127px;
+}
+
+.content{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons{
+    display:flex;
+    gap: 16px;
+    
+    .icon{
+        fill: $primary-text-color;
+        &:hover{
+            fill:$primary-color;
+            transition: .3s all;
+        }
+    }
+    .icon_heart{
+        stroke: $primary-text-color;
+        &:hover{
+        stroke: $primary-color;
+        transition: .3s all;
+        }
+    }
+
+}
+
+.selects{
+    display:flex;
+    gap:16px;
+
+}
+.search{
+    align-self: center;
+    display:flex;
+    border-radius: 70px;
+    background-color: $primary-text-color;
+    padding: 12px 16px;
+    gap:12px;
+    width: 467px;
+    input{
+        font: 400 16px "Inter";
+        border:none;
+        outline: none;
+
+    }
+}

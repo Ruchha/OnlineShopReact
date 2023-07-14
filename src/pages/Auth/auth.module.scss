@@ -1,0 +1,97 @@
+@import "../src/sass/abstract/constants";
+main{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+}
+.first{
+    padding: 90px 0px 322px 0px;
+    white-space: nowrap;
+    div{
+        font: 600 128px "Josefin Sans";
+        color: $primary-text-color;
+        text-transform: uppercase;
+        letter-spacing: -7.04px;
+        svg{
+            margin-left: 7px;
+        }
+        img{
+            width: 94px;
+            height: 94px;
+            margin-left: 7px;
+        }
+    }
+
+    width:50%;
+    height: 770px;
+    background-color: $main-color-dark;
+
+
+}
+.second{
+    margin: 0 auto;
+    form{
+        h3{
+            font: 600 24px "Inter";
+            margin-bottom: 32px;
+        }
+        h4{
+            font: 500 16px "Inter";
+            margin-top:24px;
+        }
+        display:flex;
+        gap:16px;
+        flex-direction: column;
+        align-items: center;
+        .twoInputs{
+            display:flex;
+            gap:8px;
+            .input{
+                width: 149px;
+                height: 27px;
+            }
+        }
+        .input{
+            width: 306px;
+            height: 27px;
+            padding-left: 8px;
+            padding-bottom: 8px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid $main-color-dark;
+            font: 400 16px "Inter";
+        }
+
+        .password{
+            position: relative;
+            .input{
+                padding-right: 30px;
+            }
+            img{
+                position:absolute;
+                right:8px; 
+                cursor:pointer;
+            }
+        }
+        .icons{
+            margin-top: 15px;
+            display:flex;
+            justify-content: center;
+            gap:22px;
+        }
+    }
+    button{
+        cursor:pointer;
+        border:none;
+        width: 100%;
+        padding: 16px 70px;
+        border-radius: 2px;
+        background-color: $main-color-dark;
+        font: 600 14px "Inter";
+        color: $primary-text-color;
+    }
+    p{
+        font: 500 14px "Inter";
+    }
+    
+}

@@ -1,0 +1,40 @@
+@import "../../../sass/abstract/constants";
+.info{
+    display:flex;
+    padding: 48px 100px 120px 96px;
+    .fieldName{
+        font: 500 16px "Inter";
+        color: $primary-color;
+    }
+    .fieldInfo{
+        font: 500 20px "Inter";
+        color: $main-color-dark;
+        .fieldInput{
+            width: 306px;
+            height: 27px;
+            padding-bottom: 8px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid $main-color-dark;
+            font: 500 20px "Inter";
+        }
+    }
+    .header{
+        font: 600 24px "Inter";
+        color: $main-color-dark;
+        margin-bottom: 32px;
+        
+    }
+    .field{
+        margin-bottom:24px;
+    }
+    .personalInfo, .publicInfo {
+        width:50%;
+        a{
+            font: 500 16px "Inter";
+            color: #6732FF;
+            cursor: pointer;
+        }
+
+    }
+}

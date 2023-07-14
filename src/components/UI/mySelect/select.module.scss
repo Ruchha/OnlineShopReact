@@ -1,0 +1,60 @@
+@import "./src/sass/abstract/constants";
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 0 2px;
+  .arrow{
+    stroke: $primary-text-color;
+  }
+  .dropbtn{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    color: $primary-text-color;
+    background: transparent;
+    border: none;
+  }
+  .controls{
+    display:flex;
+    gap:4px;
+    align-items: center;
+  }
+  &:hover {
+    .dropdown_content {
+      display: block;
+
+    }
+    .dropbtn{
+      color: $primary-color;
+    }
+    .arrow{
+      stroke: $primary-color;
+      transform: rotate(180deg);
+      transition: .3s transform;
+    }
+  }
+
+  .dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+    
+
+    .element {
+      color: black;
+      cursor:pointer;
+      width: 441px;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font: 400 14px "Inter";
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+}
