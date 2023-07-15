@@ -8,13 +8,14 @@ import AppRouter from "./components/AppRouter"
 const App:FC = () => {
 
   return (
-    <>
+    <div className="container">
     <BrowserRouter>
         <Header/>
         <AppRouter/>
         <Footer/>
     </BrowserRouter>
-    </>
+    </div>
+
   )
 }
 

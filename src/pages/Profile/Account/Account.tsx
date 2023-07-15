@@ -1,8 +1,11 @@
 import React, {FC, useState} from 'react';
 import classes from './account.module.scss'
+import CityList from '../../../components/CityList/CityList';
+
 
 const Account: FC = () => {
     const [isPersonalInfo, setPersonalInfo] = useState(false)
+    const [isPublicInfo, setPublicInfo] = useState(false)
     return (
         <div className={classes.info}>
         <div className={classes.personalInfo}>
@@ -35,6 +38,12 @@ const Account: FC = () => {
           <>
           <input type='radio' id="sex"/>
           <label htmlFor="sex">Не указан</label>
+          <input type='radio' id="male"/>
+          <label htmlFor="male">Мужской</label>
+          <input type='radio' id="female"/>
+          <label htmlFor="female">Женский</label>
+          <input type='radio' id="other"/>
+          <label htmlFor="other">Другой</label>
           </>
           :
           "Не указан"
@@ -50,9 +59,14 @@ const Account: FC = () => {
   
         </div>
           </div>
-          <a onClick={() => setPersonalInfo(prev => !prev)}>Редактировать</a>
-          {isPersonalInfo && <><button>Применить</button>
-          <button>Отменить</button></>}
+          {!isPersonalInfo ? <a onClick={() => setPersonalInfo(true)}>Редактировать</a> 
+          :
+          <>
+          <button>Применить</button>
+          <button onClick={() => setPersonalInfo(false)}>Отменить</button>
+          </>
+          }
+
           </div>
         <div className={classes.publicInfo}>
         <div className={classes.header}>
@@ -77,7 +91,7 @@ const Account: FC = () => {
           Страна, город
         </div>
         <div className={classes.fieldInfo}>
-          Не указан
+          {isPublicInfo ? <CityList/> : "Не указан"}
         </div>
         </div>
         <div className={classes.field}>
@@ -88,7 +102,13 @@ const Account: FC = () => {
           20(скрыт)
         </div>
           </div>
-          <a>Редактировать</a>
+          {!isPublicInfo ? <a onClick={() => setPublicInfo(true)}>Редактировать</a> 
+          :
+          <>
+          <button>Применить</button>
+          <button onClick={() => setPublicInfo(false)}>Отменить</button>
+          </>
+          }
         </div>
       </div>
 );

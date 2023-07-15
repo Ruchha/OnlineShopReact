@@ -37,7 +37,7 @@ const Header: FC = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <Link to={isAuth ? "/profile" : "/register"}><svg
+            <Link to={isAuth ? "/profile/account" : "/register"}><svg
               className={classes.icon}
               xmlns="http://www.w3.org/2000/svg"
               width="32"

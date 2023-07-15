@@ -28,6 +28,7 @@
     .field{
         margin-bottom:24px;
     }
+    
     .personalInfo, .publicInfo {
         width:50%;
         a{
@@ -37,4 +38,19 @@
         }
 
     }
+    button{
+        width: 148px;
+        height: 49px;
+        background-color: $main-color-dark;
+        font: 600 14px "Inter";
+        color: #FFF;
+        border:none;
+        &:last-child{
+            margin-left:20px;
+            color: $main-color-dark;
+            background-color: #fff;
+            border: 2px solid $main-color-dark;
+        }
+    }
+    
 }
