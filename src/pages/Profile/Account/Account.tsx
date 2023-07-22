@@ -1,6 +1,6 @@
 import React, {FC, useState} from 'react';
 import classes from './account.module.scss'
-import CityList from '../../../components/CityList/CityList';
+import CityList from '../../../components/UI/CityList/CityList';
 
 
 const Account: FC = () => {

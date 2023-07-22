@@ -7,9 +7,9 @@ import "../../../public/visible.svg"
 import "../../../public/notVisible.svg"
 import "../../../public/google.png"
 import "../../../public/vk.png"
-
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { authenticate } from '../../store/reducers/authSlice';
+import axios from 'axios';
 
 const Auth: FC = () => {
   const [isVisible, setVisible] = useState(false)
@@ -19,10 +19,34 @@ const Auth: FC = () => {
   const dispatch = useAppDispatch();
   const auth = (e:React.FormEvent) => {
     e.preventDefault();
-    dispatch(authenticate(true))
-    //dispatch(login())
-    navigate("/home");
+    //dispatch(authenticate(true))
+    ////dispatch(login())
+    //navigate("/home");
+
   }
+  //const register = () => {
+  //  axios.post("/api/auth/register", {
+  //    email:"test1231@gmail.com",
+  //    password:"daaEbatEgoRot1"
+  //  })
+  //  .then(response => console.log(response))
+  //}
+  //const login = () => {
+  //  axios.post("/api/auth/login", {
+  //    email: "test1231@gmail.com",
+  //    password:"daaEbatEgoRot1"
+  //  })
+  //  .then(response => {
+  //    console.log(response)
+  //   axios.get("/api/products/", {
+  //    headers: {
+  //      "ngrok-skip-browser-warning": "69425",
+  //      "Authorization": `Bearer ${response.data.token}` 
+  //    }
+//
+  //   }).then(response => console.log(response))})
+  //  
+  //}
     return (
         <main>
              <div className={classes.first}>

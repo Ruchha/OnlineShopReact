@@ -1,0 +1,11 @@
+@import "../../../sass/abstract/constants";
+.input{
+    width: 306px;
+    height: 27px;
+    padding-bottom: 8px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $main-color-dark;
+    font: 500 20px "Inter";
+}
+//query ? `${classes.dropdown_content} ${classes.visible}` : classes.dropdown_content

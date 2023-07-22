@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import SearchBar from '../UI/search/SearchBar';
+import SearchBar from '../search/SearchBar';
 import classes from "./cityList.module.scss";
 
 interface IAddressList {
@@ -16,20 +16,20 @@ const CityList: FC = () => {
     { id: 5, name: 'Санкт-Петербург' },
     { id: 6, name: 'Воронеж' },
   ];
-
+  const [isEmpty, setEmpty] = useState(true)
   const [citiesList, setCityList] = useState<IAddressList[]>(initialCities);
-  const [query, setQuery] = useState('')
   const handleSearch = (query: string) => {
+    query ? setEmpty(false) : setEmpty(true)
     const filteredCities = initialCities.filter((city) =>
       city.name.toLowerCase().includes(query.toLowerCase())
     );
     setCityList(filteredCities);
   };
-
+ 
   return (
     <>
-      <SearchBar search={handleSearch} query={query} setQuery={setQuery} />
-      <div className={query ? `${classes.dropdown_content} ${classes.visible}` : classes.dropdown_content}>
+      <SearchBar search={handleSearch}/>
+      <div className={isEmpty ? classes.dropdown_content : `${classes.dropdown_content} ${classes.visible}`}>
         <div>{citiesList.map(city => <div key={city.id} className={classes.element}>{city.name}</div>)}</div>
       </div>
 
